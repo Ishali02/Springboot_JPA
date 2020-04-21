@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Login Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <script src="js/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+
+
+<!--    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">-->
+<!--    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>-->
+<!--    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>-->
+
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet" type="text/css">
+
+   <!-- <script src="https://cdn.jsdelivr.net/npm/select2@4.0.13/dist/js/select2.min.js"></script>  -->
+    <link href="css/select2.min.css" rel="stylesheet" />
+    <script src="js/select2.min.js"></script>
+
+    <link rel="shortcut icon" href="">
+
+    <script src="js/index.js"></script>
+    <script src="js/login.js"></script>
+    <script src="js/addUser.js"></script>
+    <script src="js/addRole.js"></script>
+    <script src="js/addRoleMenu.js"></script>
+
+    <link rel="stylesheet" type ="text/css" href="css/home.css">
+    <link rel="stylesheet" type ="text/css" href="css/page12.css">
+    <link rel="stylesheet" type ="text/css" href="css/style.css">
+
+
+</head>
+<body>
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="navbarId">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="">WebSiteName</a>
+            </div>
+            <div class="collapse navbar-collapse" id="myNavbar">
+                <ul class="nav navbar-nav" id="menuListId">
+                    <li class="active menuListItems"><a href="" id="homeId">Home</a></li>
+                    <li class="dropdown dropdownListItems">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="" id="page1Id">Page 1 <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li class="subMenuListItems"><a href="" id="page11Id">Page 1-1</a></li>
+                            <li class="subMenuListItems"><a href="" id="page12Id">Page 1-2</a></li>
+                            <li class="subMenuListItems"><a href="" id="page13Id">Page 1-3</a></li>
+                        </ul>
+                    </li>
+                    <li class="menuListItems"><a href="" id="page2Id">Page 2</a></li>
+                    <li class="dropdown dropdownListItems">
+                        <a class="dropdown-toggle" data-toggle="dropdown" href="" id="adminId">Admin <span class="caret"></span></a>
+                        <ul class="dropdown-menu">
+                            <li class="subMenuListItems"><a href="" id="addUserId">Add User</a></li>
+                            <li class="subMenuListItems"><a href="" id="addRoleId">Add Roles</a></li>
+                            <li class="subMenuListItems"><a href="" id="addRoleMenuId">Add Role-Menu</a></li>
+                        </ul>
+                    </li>
+
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <!-- <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li> -->
+                    <li><a href="" id="logoutId"><i class="glyphicon glyphicon-log-out"></i> Logout</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <div class="container" id="maindiv">
+        <div class="row" style = "margin-top:10%;">
+            <div class = "col-xs-12 col-sm-10 col-md-6 col-lg-4 col-sm-offset-1 col-md-offset-3 col-lg-offset-4 login-container">
+                <h2 align="center"> Login form</h2>
+                <form class= class="form-horizontal" id="loginForm" action="form-handler" onsubmit="checkForm(this);" >
+                    <div class="form-group">
+                        <label class="control-label" for="uname"><strong style="color: red;">*</strong>Username:</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                            <input type="text" class="form-control" id="uname" placeholder="Enter Username" name="uname" required>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label class="control-label" for="pwd"><strong style="color: red;">*</strong>Password:</label>
+                        <div class="input-group">
+                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                            <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd" required>
+                        </div>
+                    </div>
+                    <!-- <div class="form-group">
+                       <div class="col-sm-offset-2 col-sm-10">
+                         <div class="checkbox">
+                           <label><input type="checkbox" name="remember"> Remember me</label>
+                         </div>
+                       </div>
+                     </div> -->
+                    <div class="form-group row">
+                        <div class = "col-xs-12 col-sm-9 col-md-8 col-lg-8" style="padding:0; ">
+                            <div class="alert alert-danger" id="loginErrorMsgId" style="width:100%; margin-bottom:15px; ">
+                                Incorrect Username/password
+                            </div>
+                        </div>
+                        <div class="col-xs-12 col-sm-3 col-md-4 col-lg-4" align="center" style="margin-right:-20px; float:right;">
+                            <button type="submit" id="loginId" class="btn btn-success"><i class="glyphicon glyphicon-log-in"></i>&nbsp;&nbsp;Login</button>
+                        </div>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

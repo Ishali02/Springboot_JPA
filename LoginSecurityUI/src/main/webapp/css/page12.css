@@ -1,0 +1,19 @@
+
+  p {font-size: 16px;}
+  .margin {margin-bottom: 45px;}
+  .bg-11 {
+    background-color: #1abc9c; /* Green */
+    color: #ffffff;
+  }
+  .bg-22 {
+    background-color: #474e5d; /* Dark Blue */
+    color: #ffffff;
+  }
+  .bg-33 {
+    background-color: #ffffff; /* White */
+    color: #555555;
+  }
+  .bg-44 {
+    background-color: #2f2f2f; /* Black Gray */
+    color: #fff;
+  }

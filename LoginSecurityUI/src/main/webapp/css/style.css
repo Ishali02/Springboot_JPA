@@ -1,0 +1,28 @@
+#maindiv {
+    padding-top: 70px;
+}
+
+.login-container{
+    box-shadow: 2px 2px 8px grey;
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 5px 30px;
+}
+
+.form-horizontal .form-group{
+    margin-left: 0px;
+    margin-right: 0px;
+
+}
+
+.nav-btn{
+    border: none;
+    background: none;
+    padding: 3px 20px;
+    width: 100%;
+    text-align: left;
+    outline: none;
+}
+.nav-btn:hover{
+    background:#EEEEEE;
+}

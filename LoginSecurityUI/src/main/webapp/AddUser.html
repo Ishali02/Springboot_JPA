@@ -1,0 +1,58 @@
+
+
+    <h2>Add User</h2>
+    <form id="userForm" onsubmit="saveUserDetails()" method="post">
+
+        <div class="checkbox">
+            <label><input type="checkbox" id="userCheckBox" onclick="addNewUser();" value="">Add New User</label>
+        </div>
+
+        <div class="form-group" id="newUser">
+            <label for="Username">Username:</label>
+            <input type="text" class="form-control" id="Username" placeholder="Enter Username" onblur="validateUserName();" style='width: 100%;'>
+        </div>
+
+
+        <div class="form-group" id="editUser">
+            <label for="selUser" >Username:</label>
+            <!-- Dropdown -->
+            <select id="selUser" class="form-control-select2" style='width: 100%;' onchange="selectUserChange();">
+            </select>
+
+        </div>
+
+        <div class="form-group">
+            <label for="pwd">Password:</label>
+            <input type="text" class="form-control" id="pwd" placeholder="Enter password" name="pwd" style='width: 100%;' required>
+        </div>
+
+        <div class="row">
+            <div class="col-xs-6 col-sm-3 col-md-1 col-lg-1" align="center" >
+                <button id="saveUserbtn" type="submit" class="btn btn-success">Save</button>
+            </div>
+
+            <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2" align="center" >
+                <button id="deleteUserbtn" type="button" class="btn btn-danger" onclick="deleteUser();">Delete</button>
+            </div>
+
+            <div class="col-xs-6 col-sm-4 col-md-2 col-lg-2" align="center">
+                <button type="button" class="btn btn-danger">Cancel</button>
+            </div>
+        </div>
+        <div class="alert alert-danger" id="userErrorMsgId" style="width:100%; margin-top:15px;">
+            Unable to save user!
+        </div>
+        <div class="alert alert-success" id="userSuccessMsgId" style="width:100%; margin-top:15px;">
+            User saved successfully.
+        </div>
+    </form>
+
+
+    <script>
+        $('.form-control-select2').select2();
+        $("#newUser").hide();
+        $("#deleteUserbtn").hide();
+        clearUserData();
+        clearUserMsg();
+    </script>
+
